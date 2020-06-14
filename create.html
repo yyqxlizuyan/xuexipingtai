@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>学习平台</title>
+        <style>
+        *{
+        	margin: 0;
+        	padding: 0;
+        }
+        body {
+    		line-height: 1;
+    		background: rgb(250, 250, 250);
+		}
+
+		img {
+    		vertical-align: bottom;
+		}
+		ul{
+			list-style: none;
+		}
+		a{
+			text-decoration: none;
+		}
+		.container {
+    		width: 1202px;
+    		text-align: center;
+    		margin: 0 auto;
+		}
+		.fl {
+    		float: left;
+		}
+		.fr {
+   		 	float: right;
+		}
+		.clear:after {
+   			content: '';
+    		display: block;
+   		 	height: 0;
+    		clear: both;
+		}
+        .header-top {
+    		height: 32px;
+    		border-bottom: 1px solid rgba(218, 218, 218, 1);
+		}
+		.header-info {
+    		line-height: 32px;
+		}
+		.header-info li {
+    		float: left;
+    		margin-left: 27px;
+    		background: no-repeat left center;
+		}
+		li.iphone {
+    		padding-left: 15px;
+		}
+
+		li.weixin {
+    		padding-left: 23px;
+		}
+		.header-bottom {
+    		height: 100px;
+		}
+		.logo {
+   			width: 236px;
+    		height: 70px;
+    		margin-top: 14px;
+		}
+		.nav {
+    		margin-top: 39px;
+		}
+
+		.nav li {
+    		float: left;
+    		padding: 0 44px;
+    		border-right: 2px solid rgba(0, 0, 0, 1);
+		}
+		li.first {
+    		padding-left: 20px;
+		}
+		li.last {
+    		border: none;
+    		padding-right: 20px;
+		}
+		.nav a {
+    		font-size: 16px;
+    		font-weight: bold;
+    		color: rgba(0, 0, 0, 1);
+		}
+		.form {
+    		margin-top: 34px;
+		}
+		.form * {
+    		float: left;
+		}
+		.form .search {
+    		width: 147px;
+    		height: 11px;
+    		border: 1px solid rgba(208, 61, 61, 1);
+    		padding: 9px;
+		}
+		.form .submit {
+   			width: 31px;
+    		height: 31px;
+    		border: 1px solid rgba(208, 61, 61, 1);
+    		background: rgba(208, 61, 61, 1) url(雪梨在线_slices/search2.png) no-repeat center center;
+    		cursor: pointer;
+		}
+		:focus {
+    		outline: none;
+		}
+		.xue{
+			display: inline-block;
+    		width:150px;
+    		height:30px;
+    		float:left;
+    		margin:5px;
+		}
+		.hezuo{
+			line-height: 30px;
+		}
+		.banner{
+			margin:20px 20px;
+			padding:10px 10px;
+		}
+		.banner1{
+			width:1200px;
+			height:400px;
+		}
+    	.title {
+    		margin-top: 20px;
+    		font-size: 20px;
+    		color: rgba(32, 32, 32, 1);
+    		background: url(../images/bg-title.png) no-repeat center center;
+    	}
+		.title .small {
+    		margin-top: 15px;
+    		margin-bottom: 34px;
+    		font-size: 20px;
+		}
+		.course-small {
+    		width: 705px;
+		}
+		.course-item {
+    		float: left;
+    		position: relative;
+    		margin-top: 10px;
+    		margin-left: 10px;
+		}
+		.course-small.fl .course-item {
+    		margin-left: 0;
+    		margin-right: 10px;
+		}
+		.course-info {
+    		position: absolute;
+    		top: 0;
+    		left: 0;
+    		right: 0;
+    		height: 45px;
+    		background: rgba(208, 61, 61, 1);
+    		opacity: 0.8;
+    		font-weight: bold;
+    		color: rgba(255, 255, 255, 1);
+		}
+		.course-info h3 {
+    		font-size: 14px;
+    		padding: 7px 0;
+		}
+		.course-info p {
+   			 font-size: 12px;
+		}
+		.course-big .course-item {
+    		margin-left: 0;
+		}
+		.course-big .course-info {
+    		height: 58px;
+    		font-size: 16px;
+		}
+		.course-big h3 {
+    		font-size: 16px;
+    		padding: 10px 0;
+		}
+		.course-big p {
+    		font-size: 14px;
+		}
+		.member {
+    		margin: 20px auto 40px;
+    		width: 200px;
+    		height: 64px;
+    		line-height: 64px;
+    		background: rgba(208, 61, 61, 1);
+    		border-radius: 3px;
+    		font-size: 24px;
+    		font-weight: 400;
+    		color: rgba(255, 255, 255, 1);
+		}
+		.server {
+    		text-align: center;
+		}
+		.server ul {
+    		display: inline-block;
+		}
+		.server li {
+    		float: left;
+		}
+		.server-info {
+    		height: 135px;
+   		 	background: rgba(58, 58, 58, 0.8);
+		}
+		.server-info li {
+    		font-size: 14px;
+    		font-weight: 400;
+    		color: rgba(255, 255, 255, 1);
+    		padding: 18px 82px;
+		}
+		.server-info img{
+			width: 50px;
+			height: 50px;
+		}
+		.server-info p {
+    		padding-top: 15px;
+		}
+		.footer {
+    		height: 200px;
+   			padding-top: 18px;
+    		background: rgba(58, 58, 58, 1);
+    		text-align: center;
+		}
+		.footer h4 {
+    		padding: 38px 0 23px;
+    		font-size: 16px;
+    		font-weight: 400;
+    		color: rgba(255, 255, 255, 1);
+		}
+		.footer ul {
+    		display: inline-block;
+		}
+		.footer li {
+    		float: left;
+    		font-size: 14px;
+    		font-weight: 400;
+    		color: rgba(255, 255, 255, 1);
+    		padding: 0 12px;
+    		border-right: 2px solid rgba(255, 255, 255, 1);
+		}
+		.footer li.last {
+    		border: none;
+		}
+        .footer p {
+    		font-size: 14px;
+    		font-weight: 400;
+    		color: rgba(255, 255, 255, 1);
+    		margin-top: 65px;
+		}
+    </style>
+    </head>
+    <body>
+    	<div class="header">
+    		<div class="header-top">
+            	<div class="container">
+                	<ul class="header-info fr">
+                    	<li>登陆/注册</li>
+                    	<li class="iphone">移动客户端</li>
+                    	<li class="weixin">微信</li>
+                	</ul>
+            	</div>
+        	</div>
+    		<div class="container header-bottom clear">
+    			<img src="images/学习平台.png" alt="logo图" class="logo fl">
+    			<ul class="nav fl clear">
+    				<li class="first"><a href="#">首页</a></li>
+    				<li><a href="#">种类</a></li>
+    				<li><a href="#">课程</a></li>
+    	        	<li class="last"><a href="#">报名</a></li>
+    	    	</ul>
+    	    	<form class="form clear fr">
+    	        	<input type="text" placeholder="老师/种类/视频" class="search"/>
+    	        	<input type="button" class="submit">
+    	    	</form>
+	    	</div>
+	    </div>
+	    <div class="xuexiao">
+	    	<ul class="clear">
+	    		<li class="xue hezuo">合作学校共684所</li>	    		
+	    		<li><img src="images/武大.png" class="xue"></li>
+	    		<li><img src="images/南大.png" class="xue"></li>
+	    		<li><img src="images/浙大.png" class="xue"></li>
+				<li><img src="images/北大.png" class="xue"></li>
+				<li><img src="images/哈工大.png" class="xue"></li>
+				<li><img src="images/上交大.png" class="xue"></li>
+			</ul>
+		</div>
+	    <div class="banner">
+	    			<img src="images/banner tu.jpg" class="banner1">
+	    </div>
+	    <div class="container">
+	    	<h4 class="title">
+	    	精品课程
+	    	</h4>
+		</div>
+	    <div class="container clear course">
+	    	<ul class="course-big fl clear">
+	    		<li class="course-item">
+	    			<img src="images/大学公共体育.jpg" width="497" height="492">
+	    			<div class="course-info">
+	    				<h5>大学公共体育</h5>
+	    				<p>北京大学</p>
+	    			</div>
+	    		</li>
+	    	</ul>
+	    	<ul class="course-small fr clear">
+	    		<li class="course-item">
+	    			<img src="images/计算机考研.png" width="342" height="242">
+	    			<div class="course-info">
+	    				<h5>计算机考研</h5>
+	    				<p>河北师范大学</p>
+	    			</div>
+	    		</li>
+	    		<li class="course-item">
+	    			<img src="images/纲要.png" width="342" height="242">
+	    			<div class="course-info">
+	    				<h5>中国近代史纲要</h5>
+	    				<p>南京大学</p>
+	    			</div>
+	    		</li>
+				<li class="course-item">
+					<img src="images/线代.png" width="342" height="242">
+					<div class="course-info">
+						<h5>线性代数</h5>
+						<p>浙江大学</p></div>
+				</li>
+				<li class="course-item">
+					<img src="images/高数.png" width="342" height="242">
+					<div class="course-info">
+						<h5>高等数学</h5>
+						<p>武汉大学</p></div>
+				</li>
+			</ul>
+		</div>
+		<div class="container">
+        <div class="member">会员</div>
+    	</div>
+    	<div class="server">
+        	<div class="server-info">
+            	<ul class="clear">
+                	<li>
+                    	<img src="images/私人定制.png8" alt="" />
+                    <p>私人定制</p>
+                	</li>
+                	<li>
+                   		<img src="images/收藏.png" alt="" />
+                    	<p>收藏</p>
+                	</li>
+                	<li>
+                    	<img src="images/加入我们.png" alt="" />
+                    	<p>加入我们</p>
+                	</li>
+                	<li>
+                    	<img src="images/会员课程.png" alt="" />
+                    	<p>会员课程</p>
+                	</li>
+                	<li>
+                		<img src="images/名师.jpg">
+                		<p>会员名师</p></li>
+            	</ul>
+        	</div>
+    	</div>
+		<div class="footer">
+        <h4>活动</h4>
+        <ul class="clear">
+            <li>优惠券</li>
+            <li>限时打折</li>
+            <li>限时免费</li>
+            <li>团购</li>
+            <li>积分兑换</li>
+            <li class="last">私人定制</li>
+        </ul>
+			<p>© 2005-2016  学习平台 版权所有，并保留所有权利。冀ICP备15029982号-1</p>
+		</div>
+    </body>
+</html>
